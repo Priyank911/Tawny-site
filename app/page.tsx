@@ -123,7 +123,7 @@ const Page: NextPage = () => {
                   {
                     label: "Linux",
                     ext: ".AppImage",
-                    href: "https://github.com/Priyank911/Tawny/releases/download/v0.1.2/Tawny-0.1.2-linux-x64.AppImage",
+                    href: "https://github.com/Priyank911/Tawny/releases/download/v0.1.2/Tawny-0.1.2-linux-x86_64.AppImage",
                   },
                 ].map(({ label, ext, href }) => (
                   <a
