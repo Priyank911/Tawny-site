@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { siteAsset } from "../site-paths";
 import "./globals.css";
 import "./custom.css";
+
+const bricolage = localFont({
+  src: "./fonts/BricolageGrotesque.ttf",
+  display: "swap",
+  variable: "--font-bricolage",
+  weight: "200 800",
+});
 
 export const metadata: Metadata = {
   title: "Tawny",
@@ -25,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={bricolage.variable}>
       <body>{children}</body>
     </html>
   );

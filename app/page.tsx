@@ -29,7 +29,7 @@ const DownloadIcon = () => (
 );
 
 const fontStack =
-  "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+  "var(--font-bricolage), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 
 const Page: NextPage = () => {
   return (
