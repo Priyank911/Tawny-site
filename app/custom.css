@@ -324,28 +324,29 @@ body {
 }
 
 /* ── Mobile responsive ── */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .site-header {
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
     height: 54px;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    padding: 56px 1.5rem 72px;
-    gap: 40px;
+    max-width: 680px;
+    padding: 56px 2rem 64px;
+    gap: 36px;
   }
 
-  .video-col {
-    order: -1;
+  .demo-placeholder {
+    min-height: 300px;
   }
 
   .feat-section {
-    padding: 56px 1.5rem;
+    padding: 56px 2rem;
   }
 
   .site-footer {
-    padding: 24px 1.5rem;
+    padding: 24px 2rem;
   }
 
   .site-footer-inner {
@@ -356,8 +357,18 @@ body {
 }
 
 @media (max-width: 480px) {
+  .site-header {
+    padding: 0 1rem;
+  }
+
   .hero-grid {
-    padding: 40px 1.25rem 56px;
+    padding: 36px 1.25rem 48px;
+    gap: 32px;
+  }
+
+  .hero-status-row {
+    gap: 9px;
+    margin-bottom: 24px;
   }
 
   .dl-btn {
@@ -366,15 +377,28 @@ body {
   }
 
   .demo-placeholder {
-    min-height: 230px;
-  }
-
-  .hero-status-row {
-    gap: 9px;
+    min-height: 220px;
   }
 
   .platform-list {
     font-size: 10px;
+  }
+
+  .feat-section {
+    padding: 48px 1.25rem;
+  }
+
+  .feat-card {
+    padding: 20px;
+  }
+
+  .site-footer {
+    padding: 22px 1.25rem;
+  }
+
+  .site-footer-inner > div {
+    flex-wrap: wrap;
+    gap: 12px !important;
   }
 }
 
