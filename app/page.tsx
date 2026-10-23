@@ -29,7 +29,7 @@ const DownloadIcon = () => (
 );
 
 const fontStack =
-  "var(--font-bricolage), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+  "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 
 const Page: NextPage = () => {
   return (
@@ -277,58 +277,19 @@ const Page: NextPage = () => {
                 backgroundColor: "#f3f4f6",
               }}
             >
-              {YOUTUBE_VIDEO_ID === "YOUR_YOUTUBE_VIDEO_ID" ? (
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "12px",
-                    backgroundColor: "#f9fafb",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "44px",
-                      height: "44px",
-                      borderRadius: "50%",
-                      backgroundColor: "#e5e7eb",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="#9ca3af"
-                    >
-                      <polygon points="5 3 19 12 5 21 5 3" />
-                    </svg>
-                  </div>
-                  <p style={{ fontSize: "11px", color: "#9ca3af" }}>
-                    Set YOUTUBE_VIDEO_ID in page.tsx
-                  </p>
-                </div>
-              ) : (
-                <iframe
-                  src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
-                  title="Tawny demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    width: "100%",
-                    height: "100%",
-                    border: "none",
-                  }}
-                />
-              )}
+              <iframe
+                src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
+                title="Tawny demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+              />
             </div>
             <p
               style={{

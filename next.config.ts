@@ -1,13 +1,12 @@
 import type { NextConfig } from "next";
+import { BASE_PATH } from "./site-paths";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/Tawny-web",
+  basePath: BASE_PATH,
   images: {
     unoptimized: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     rules: {
       "*.css": {

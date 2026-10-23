@@ -1,23 +1,16 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { siteAsset } from "../site-paths";
 import "./globals.css";
 import "./custom.css";
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-bricolage",
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
 
 export const metadata: Metadata = {
   title: "Tawny",
   description:
     "A private, keyboard-first voice layer for Windows, macOS, and Linux. Dictate, rewrite, and generate with one shortcut.",
   icons: {
-    icon: "/tawny-mark.svg",
-    shortcut: "/tawny-mark.svg",
-    apple: "/tawny-mark.svg",
+    icon: siteAsset("/tawny-mark.svg"),
+    shortcut: siteAsset("/tawny-mark.svg"),
+    apple: siteAsset("/tawny-mark.svg"),
   },
   openGraph: {
     title: "Tawny",
@@ -32,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={bricolage.variable}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { siteAsset } from "../../site-paths";
 
 const GitHubIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -10,7 +11,7 @@ const GitHubIcon = () => (
 );
 
 const fontStack =
-  "var(--font-bricolage), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+  "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 
 interface HeaderProps {
   githubRepo: string;
@@ -23,7 +24,7 @@ export default function Header({ githubRepo, githubReleases }: HeaderProps) {
       {/* Logo + name */}
       <div style={{ display: "flex", alignItems: "center", gap: "9px" }}>
         <Image
-          src="/tawny-mark.svg"
+          src={siteAsset("/tawny-mark.svg")}
           alt="Tawny"
           width={30}
           height={30}
