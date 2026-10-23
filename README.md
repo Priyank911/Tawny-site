@@ -4,7 +4,7 @@
 
 Tawny is a keyboard-first voice layer for your desktop. One shortcut -- dictate text, rewrite selections, generate images, or ask questions -- in any app, without switching windows.
 
-[Download Early Preview](https://github.com/Priyank911/Tawny/releases) &nbsp;|&nbsp; [Live Site](https://priyank911.github.io/Tawny-web/)
+[Download Early Preview](https://github.com/Priyank911/Tawny/releases) &nbsp;|&nbsp; [Live Site](https://priyank911.github.io/Tawny-site/)
 
 ---
 
