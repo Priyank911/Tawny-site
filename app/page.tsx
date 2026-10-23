@@ -5,7 +5,6 @@ import Header from "./components/Header";
 // ─── Replace these with your real values ────────────────────────────────────
 const GITHUB_RELEASES = "https://github.com/Priyank911/Tawny/releases";
 const GITHUB_REPO = "https://github.com/Priyank911/Tawny";
-const YOUTUBE_VIDEO_ID = "c60GPODuHI4";
 const CONTACT_EMAIL = "developer.priyank0911@gmail.com";
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -49,37 +48,15 @@ const Page: NextPage = () => {
           {/* ── Left ── */}
           <div>
             {/* Tag row */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "10px",
-                marginBottom: "32px",
-                flexWrap: "wrap",
-              }}
-            >
-              <span
-                style={{
-                  backgroundColor: "#111111",
-                  color: "#ffffff",
-                  fontSize: "10px",
-                  fontWeight: 700,
-                  padding: "3px 9px",
-                  borderRadius: "4px",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Early Preview
+            <div className="hero-status-row">
+              <span className="preview-badge">
+                <span className="preview-badge-dot" aria-hidden="true" />
+                Early preview
               </span>
-              <span
-                style={{
-                  fontSize: "12px",
-                  color: "#9ca3af",
-                  letterSpacing: "0.01em",
-                }}
-              >
-                Windows · macOS · Linux
+              <span className="platform-list" aria-label="Available for">
+                <span>Windows</span>
+                <span>macOS</span>
+                <span>Linux</span>
               </span>
             </div>
 
@@ -264,32 +241,26 @@ const Page: NextPage = () => {
             </div>
           </div>
 
-          {/* ── Right: YouTube ── */}
+          {/* ── Right: Product video placeholder ── */}
           <div className="video-col">
-            <div
-              style={{
-                borderRadius: "16px",
-                overflow: "hidden",
-                border: "1.5px solid #e5e7eb",
-                boxShadow: "0 8px 40px rgba(0,0,0,0.08)",
-                aspectRatio: "16 / 9",
-                position: "relative",
-                backgroundColor: "#f3f4f6",
-              }}
-            >
-              <iframe
-                src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
-                title="Tawny demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-              />
+            <div className="demo-placeholder" role="status" aria-label="Tawny product video coming soon">
+              <div className="demo-art" aria-hidden="true">
+                <div className="demo-orbit demo-orbit-outer" />
+                <div className="demo-orbit demo-orbit-inner" />
+                <div className="demo-mark">
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <path d="M17 21.5a4.5 4.5 0 0 0 4.5-4.5V9a4.5 4.5 0 0 0-9 0v8a4.5 4.5 0 0 0 4.5 4.5Z" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="M8.5 16.5v.5a8.5 8.5 0 0 0 17 0v-.5M17 25.5V30m-4 0h8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <span className="demo-spark demo-spark-one" />
+                <span className="demo-spark demo-spark-two" />
+              </div>
+              <div className="demo-copy">
+                <span className="demo-coming-soon">Product video · coming soon</span>
+                <h2>A closer look at Tawny</h2>
+                <p>We’re putting the walkthrough together.</p>
+              </div>
             </div>
             <p
               style={{
@@ -300,7 +271,7 @@ const Page: NextPage = () => {
                 letterSpacing: "0.03em",
               }}
             >
-              See it in action
+              A product walkthrough is on the way
             </p>
           </div>
         </section>
