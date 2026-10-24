@@ -241,38 +241,26 @@ const Page: NextPage = () => {
             </div>
           </div>
 
-          {/* ── Right: Product video placeholder ── */}
+          {/* ── Right: Tawny product video ── */}
           <div className="video-col">
-            <div className="demo-placeholder" role="status" aria-label="Tawny product video coming soon">
-              <div className="demo-art" aria-hidden="true">
-                <div className="demo-orbit demo-orbit-outer" />
-                <div className="demo-orbit demo-orbit-inner" />
-                <div className="demo-mark">
-                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-                    <path d="M17 21.5a4.5 4.5 0 0 0 4.5-4.5V9a4.5 4.5 0 0 0-9 0v8a4.5 4.5 0 0 0 4.5 4.5Z" stroke="currentColor" strokeWidth="1.8" />
-                    <path d="M8.5 16.5v.5a8.5 8.5 0 0 0 17 0v-.5M17 25.5V30m-4 0h8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <span className="demo-spark demo-spark-one" />
-                <span className="demo-spark demo-spark-two" />
-              </div>
-              <div className="demo-copy">
-                <span className="demo-coming-soon">Product video · coming soon</span>
-                <h2>A closer look at Tawny</h2>
-                <p>We’re putting the walkthrough together.</p>
-              </div>
+            <div className="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/ZHXzFkvzDZg?rel=0&modestbranding=1"
+                title="Tawny product walkthrough"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
             </div>
-            <p
-              style={{
-                fontSize: "11px",
-                color: "#9ca3af",
-                marginTop: "10px",
-                textAlign: "center",
-                letterSpacing: "0.03em",
-              }}
-            >
-              A product walkthrough is on the way
-            </p>
+            <div className="video-caption">
+              <span className="video-caption-mark" aria-hidden="true">✳</span>
+              <div className="video-caption-copy">
+                <span>TAWNY, IN ACTION</span>
+                <p>One shortcut. Your voice, right where you work.</p>
+              </div>
+              <span className="video-caption-tag">Early preview</span>
+            </div>
           </div>
         </section>
 
