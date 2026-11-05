@@ -113,26 +113,47 @@ const Page: NextPage = () => {
                   {
                     label: "Windows",
                     ext: ".exe",
-                    href: "https://github.com/Priyank911/Tawny/releases/download/v0.1.2/Tawny-0.1.2-windows-x64.exe",
+                    href: "https://github.com/Priyank911/Tawny/releases/download/v0.1.10/Tawny-0.1.10-windows-x64.exe",
                   },
                   {
                     label: "macOS",
-                    ext: ".dmg",
-                    href: "https://github.com/Priyank911/Tawny/releases/download/v0.1.2/Tawny-0.1.2-mac-arm64.dmg",
+                    ext: "Coming soon",
                   },
                   {
                     label: "Linux",
-                    ext: ".AppImage",
-                    href: "https://github.com/Priyank911/Tawny/releases/download/v0.1.2/Tawny-0.1.2-linux-x86_64.AppImage",
+                    ext: "Coming soon",
                   },
-                ].map(({ label, ext, href }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    download
-                    className="dl-btn"
-                  >
+                ].map(({ label, ext, href }) => {
+                  const content = (
                     <DownloadIcon />
+                  );
+
+                  return href ? (
+                    <a
+                      key={label}
+                      href={href}
+                      className="dl-btn"
+                      download
+                    >
+                      {content}
+                      <span style={{ fontWeight: 600 }}>{label}</span>
+                      <span
+                        style={{
+                          color: "#9ca3af",
+                          fontSize: "11px",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {ext}
+                      </span>
+                    </a>
+                  ) : (
+                    <span
+                      key={label}
+                      className="dl-btn dl-btn-disabled"
+                      aria-disabled="true"
+                    >
+                      {content}
                     <span style={{ fontWeight: 600 }}>{label}</span>
                     <span
                       style={{
@@ -143,8 +164,9 @@ const Page: NextPage = () => {
                     >
                       {ext}
                     </span>
-                  </a>
-                ))}
+                    </span>
+                  );
+                })}
               </div>
               <p
                 style={{
@@ -166,18 +188,6 @@ const Page: NextPage = () => {
                   }}
                 >
                   Releases page
-                </a>
-                . macOS: Intel users download the{" "}
-                <a
-                  href="https://github.com/Priyank911/Tawny/releases/download/v0.1.2/Tawny-0.1.2-mac-x64.dmg"
-                  download
-                  style={{
-                    color: "#6b7280",
-                    textDecoration: "underline",
-                    textUnderlineOffset: "2px",
-                  }}
-                >
-                  x64 build
                 </a>
                 .
               </p>

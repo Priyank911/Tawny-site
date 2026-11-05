@@ -246,6 +246,20 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
+.dl-btn-disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.dl-btn-disabled:hover,
+.dl-btn-disabled:active {
+  border-color: #d1d5db;
+  box-shadow: none;
+  transform: none;
+  background-color: #ffffff;
+}
+
 .dl-btn:hover .dl-icon {
   animation: dl-bounce 0.35s ease;
 }
