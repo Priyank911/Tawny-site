@@ -113,7 +113,7 @@ const Page: NextPage = () => {
                   {
                     label: "Windows",
                     ext: ".exe",
-                    href: "https://github.com/Priyank911/Tawny/releases/download/v0.1.10/Tawny-0.1.10-windows-x64.exe",
+                    href: "https://github.com/Priyank911/Tawny/releases/download/v0.1.13/Tawny-0.1.13-windows-x64.exe",
                   },
                   {
                     label: "macOS",
